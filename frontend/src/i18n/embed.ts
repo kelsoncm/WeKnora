@@ -2062,7 +2062,146 @@ const ruEmbedPublish = {
   },
 } as const
 
-export const SUPPORTED_LOCALES = ['zh-CN', 'en-US', 'ko-KR', 'ja-JP', 'ru-RU'] as const
+const ptEmbedPublish = {
+  embedPublish: {
+    title: 'Incorporação em Página Web',
+    description: 'Incorpore este agente em seu site para que os visitantes possam conversar por meio de uma janela na página ou de um botão flutuante.',
+    create: 'Novo canal de incorporação',
+    empty: 'Nenhum canal de incorporação ainda',
+    unnamed: 'Canal sem nome',
+    loading: 'Carregando...',
+    awaitingToken: 'Aguardando a página hospedeira fornecer o token…',
+    defaultChatTitle: 'Assistente IA',
+    newChat: 'Nova conversa',
+    preview: 'Pré-visualização',
+    previewIframeHint: 'Mostra a aparência da incorporação via iframe em uma página de terceiros.',
+    previewWidgetHint: 'Exibe o widget flutuante em uma página de teste do host.',
+    previewMockPage: 'Página de teste do host',
+    previewLoading: 'Carregando pré-visualização…',
+    channelDisabled: 'Este canal de incorporação está desativado. Reative-o no editor do Agente → Incorporação em Página Web',
+    invalidChannel: 'Canal de incorporação inválido',
+    sessionFailed: 'Falha ao criar sessão de conversa, tente novamente mais tarde',
+    missingChannel: 'Canal de incorporação ou token ausente',
+    loadError: 'Falha ao carregar',
+  },
+  common: {
+    loading: 'Carregando...',
+    confirm: 'Confirmar',
+    cancel: 'Cancelar',
+    close: 'Fechar',
+    copy: 'Copiar',
+    copied: 'Copiado',
+  },
+  error: {
+    tokenNotFound: 'Token de autenticação não encontrado, faça login novamente',
+    invalidImageLink: 'Link de imagem inválido',
+    streamFailed: 'Falha na conexão de streaming',
+  },
+  chat: {
+    suggestedQuestions: 'Você pode me perguntar',
+    suggestedQuestionsLoading: 'Carregando...',
+    followUpQuestions: 'Perguntas relacionadas',
+    followUpQuestionsLoading: 'Carregando perguntas sugeridas',
+    thinkingAlt: 'Pensando...',
+    conversationTime: {
+      today: 'Hoje {time}',
+      yesterday: 'Ontem {time}',
+      thisYear: '{day}/{month} {time}',
+      otherYear: '{day}/{month}/{year} {time}',
+    },
+    preparingAnswer: 'Preparando resposta…',
+    connectingModelAndGeneratingAnswer: 'Conectando ao modelo e gerando resposta…',
+    modelStillResponding: 'O modelo está demorando mais do que o normal, aguarde…',
+    referencesTitle: '{count} material(is) relacionado(s) citado(s)',
+    referencesDocCount: '{count} documento(s) citado(s)',
+    referencesWebCount: '{count} resultado(s) da web citado(s)',
+    referencesDocAndWebCount: '{docCount} documento(s) e {webCount} página(s) da web citados',
+    referencesDrawerTitle: 'Fontes',
+    referencesDrawerTitleWeb: 'Fontes da web',
+    referencesDrawerTitleDocs: 'Fontes de documentos',
+    referencesDrawerTitleTools: 'Resultados de ferramentas',
+    referencesDrawerTitleMixed: 'Fontes',
+    referencesDrawerWebSection: 'Web',
+    referencesDrawerDocsSection: 'Documentos da base de conhecimento',
+    referencesDrawerToolsSection: 'Ferramentas',
+    referencesDrawerEmpty: 'Nenhuma fonte disponível',
+    navigateToDocument: 'Ver detalhes do documento',
+    refreshSuggestedQuestions: 'Mais',
+    imageTooMany: 'No máximo 5 imagens permitidas',
+    imageTypeSizeError: 'Apenas JPG/PNG/GIF/WEBP com até 10 MB suportados',
+    imageReadFailed: 'Falha ao ler imagem',
+  },
+  input: {
+    placeholder: 'Faça uma pergunta diretamente ao modelo',
+    stopGeneration: 'Parar geração',
+    send: 'Enviar',
+    webSearch: {
+      label: 'Busca na web',
+      toggleOn: 'Ativar busca na web',
+      toggleOff: 'Desativar busca na web',
+      agentDisabled: 'A busca na web não está habilitada para este agente',
+    },
+    imageUpload: {
+      label: 'Enviar imagem',
+      tooltip: 'Enviar imagem',
+      agentDisabled: 'O envio de imagens não está habilitado para este agente',
+    },
+    messages: {
+      webSearchEnabled: 'Busca na web ativada',
+      webSearchDisabled: 'Busca na web desativada',
+      stopSuccess: 'Geração interrompida',
+      stopFailed: 'Falha ao interromper. Tente novamente.',
+    },
+  },
+  agentStream: {
+    mcpOAuth: {
+      waiting: 'Aguardando autorização · {target}',
+      waitingStatus: 'Aguardando autorização',
+      targetWithTool: '{service} › {tool}',
+      titleWithService: 'OAuth · {service}',
+      titleWithTool: 'OAuth · {service} › {tool}',
+      authorize: 'Autorizar',
+      skip: 'Pular',
+      countdownShort: '{seconds}s',
+      authorizedTag: 'Autorizado',
+      timedOutTag: 'Tempo limite de autorização esgotado',
+      canceledTag: 'Cancelado',
+      authorizedToast: 'Autorizado. Continuando…',
+      startFailed: 'Falha ao iniciar autorização',
+      resumeFailed: 'Falha ao retomar execução, tente novamente',
+      skipFailed: 'Falha ao pular, tente novamente',
+    },
+    mcp: {
+      discoverTools: 'Descobrir ferramentas MCP',
+      listServers: 'Serviços MCP',
+      listTools: 'Ferramentas MCP',
+      searchTools: 'Buscar ferramentas MCP',
+      describeTool: 'Ler definição da ferramenta',
+      callTool: 'Chamar ferramenta MCP',
+      showing: 'Exibindo {count} de {total}',
+      moreAvailable: 'Mais resultados disponíveis',
+      empty: 'Nada a exibir',
+      parameters: 'Parâmetros',
+      expand: 'Mostrar mais',
+      collapse: 'Mostrar menos',
+      required: 'Obrigatório',
+      fullSchema: 'Definição completa dos parâmetros',
+      failed: 'Falha na operação MCP',
+      result: 'Resultado',
+      status: {
+        not_loaded: 'Não carregado',
+        loading: 'Carregando',
+        ready: 'Pronto',
+        needs_auth: 'Autorização necessária',
+        error: 'Falha na conexão',
+        disabled: 'Desativado',
+        unavailable: 'Indisponível',
+      },
+    },
+  },
+} as const
+
+export const SUPPORTED_LOCALES = ['zh-CN', 'en-US', 'ko-KR', 'ja-JP', 'ru-RU', 'pt-BR'] as const
 export type EmbedLocale = (typeof SUPPORTED_LOCALES)[number]
 
 /** Isolated from the main app `locale` key so embed preview never hijacks admin UI language. */
@@ -2075,6 +2214,7 @@ export function normalizeEmbedLocale(raw: string): EmbedLocale {
   if (s.startsWith('ko')) return 'ko-KR'
   if (s.startsWith('ja')) return 'ja-JP'
   if (s.startsWith('ru')) return 'ru-RU'
+  if (s.startsWith('pt')) return 'pt-BR'
   if (s.startsWith('zh')) return 'zh-CN'
   const exact = SUPPORTED_LOCALES.find((l) => l.toLowerCase() === s)
   return exact || 'zh-CN'
@@ -2114,6 +2254,7 @@ export const EMBED_MESSAGES = {
   'ko-KR': deepMerge(messages['en-US'], koEmbedPublish),
   'ja-JP': messages['ja-JP'],
   'ru-RU': deepMerge(messages['en-US'], ruEmbedPublish),
+  'pt-BR': deepMerge(messages['en-US'], ptEmbedPublish),
 } as const
 
 const i18n = createI18n({

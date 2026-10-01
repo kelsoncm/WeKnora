@@ -542,6 +542,7 @@ const defaultLocaleOptions = computed(() => ([
   { label: '한국어', value: 'ko-KR' },
   { label: '日本語', value: 'ja-JP' },
   { label: 'Русский', value: 'ru-RU' },
+  { label: 'Português', value: 'pt-BR' },
 ]))
 
 const channelMenuOptions = (ch: EmbedChannel) => {
