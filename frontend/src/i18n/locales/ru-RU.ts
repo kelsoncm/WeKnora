@@ -2922,6 +2922,7 @@ export default {
     ruRU: 'Русский',
     koKR: '한국어',
     jaJP: '日本語',
+    ptBR: 'Португальский (Бразилия)',
     selectLanguage: 'Выбрать язык',
     language: 'Язык',
     languageDescription: 'Выберите язык отображения интерфейса',
